@@ -14,7 +14,7 @@ config_dict['language'] = 'en'
 city = 'Messina,IT'
 
 # API key for OpenWeatherMap (replace with your valid API key)
-owm = OWM("a07362be40821a534e187a92f784d011", config_dict)
+owm = OWM("<YOUR_API_KEY>", config_dict)
 mgr = owm.weather_manager()
 
 # Get current weather for Messina, Italy
