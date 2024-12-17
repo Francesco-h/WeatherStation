@@ -33,3 +33,5 @@ add the line:
 */5 * * * * /usr/bin/python3 YOUR_PATH/WeatherStation/weather.py
 ```
 with this cron function it will update every 5th minute (ex. 00:00 , 00:05 , 00:10 ecc.). If you want to change this rate , just modify the cron function , if you don't know how just use this webpage : https://crontab.guru/
+
+![RPizero2W](https://github.com/user-attachments/assets/8366e2fd-49ef-42e8-8498-f1ad32c43dc7)
