@@ -58,8 +58,7 @@ def display_weather():
     try:
         # Initialize the display
         epd = epd2in13_V4.EPD()
-        epd.init()
-        epd.Clear(0xFF)
+        epd.init_fast()
 
         # Create a black image on a white background
         image = Image.new('1', (epd.height, epd.width), 255)
@@ -77,7 +76,7 @@ def display_weather():
             print(f"Icon {current_icon_path} not found")
 
         # Draw the text for current weather
-        draw.text((5, 0), f"{city} {today.day}/{today.month} {today.hour}:{today.minute}", font=font, fill=0)
+        draw.text((5, 0), f"{city} {today.day}/{today.month} {today.hour}:{today.minute02d}", font=font, fill=0)
         draw.text((5, 20), f"{detailed_status}", font=font, fill=0)
         draw.text((5, 40), f"{temperature} °C   {humidity}%", font=font, fill=0)
         draw.text((5, 60), f"Wind: {wind['speed']} m/s", font=font, fill=0)
